@@ -2296,17 +2296,103 @@ p {
 }
 
 .airship-stops .btn {
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 16px minmax(120px, 150px) 1fr;
+  align-items: center;
+  justify-content: stretch;
   text-align: left;
   gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  white-space: normal;
+}
+
+.airship-stops .btn:hover:not(:disabled),
+.airship-stops .btn:focus-visible {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.airship-stops .btn:disabled {
+  opacity: 0.55;
 }
 
 .airship-stops .btn .muted {
-  margin-left: 6px;
+  color: #a7b2c4;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+@media (max-width: 640px), (max-height: 560px) {
+  .airship-stops .btn {
+    grid-template-columns: 16px 1fr;
+    min-height: 38px;
+    padding: 6px 10px;
+  }
+
+  .airship-stops .btn .muted {
+    display: none;
+  }
 }
 
 .sc-gate {
   margin-bottom: 14px;
+}
+
+/* Landscape phones: short screens get a compact HUD. */
+
+@media (max-height: 560px) {
+  .mission-log .eyebrow {
+    margin-bottom: 4px;
+  }
+
+  .mission-log li:not(.is-next) {
+    display: none;
+  }
+
+  .party {
+    bottom: 128px;
+    left: 14px;
+  }
+
+  .prompt {
+    bottom: 22px;
+  }
+
+  .hub-tiles .tile {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hub-tiles .tile.is-selected {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+/* Portrait phones: the objective and mini-game cards move up beside the map, prompts sit above the thumb buttons,
+   and the corner pills step aside while a card is open. */
+
+@media (max-width: 760px) and (min-height: 561px) {
+  /* The objective is hidden while a fight or a mini-game runs: their cards take its place beside the map. */
+
+  .fight-hud,
+  .game-hud,
+  .game-hud.is-below {
+    top: 12px;
+    left: 12px;
+    transform: none;
+    min-width: 0;
+    width: calc(100vw - 168px);
+  }
+
+  .prompt {
+    bottom: 280px;
+  }
 }
 
 .ck-menu-copy .page-lead {
