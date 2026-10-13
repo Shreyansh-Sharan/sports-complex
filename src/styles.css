@@ -2308,3 +2308,7 @@ p {
 .sc-gate {
   margin-bottom: 14px;
 }
+
+.ck-menu-copy .page-lead {
+  color: rgba(248, 250, 252, 0.88);
+}
