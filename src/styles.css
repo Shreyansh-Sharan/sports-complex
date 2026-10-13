@@ -252,6 +252,11 @@ p {
   background: rgba(255, 255, 255, 0.7);
 }
 
+.btn-secondary {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
 .btn:hover {
   transform: translateY(-1px);
 }
@@ -2284,4 +2289,22 @@ p {
   .vitals.is-low .vitals-bar i {
     animation: none;
   }
+}
+
+.hub-tiles .tile:hover {
+  transform: scale(1.08);
+}
+
+.airship-stops .btn {
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+.airship-stops .btn .muted {
+  margin-left: 6px;
+}
+
+.sc-gate {
+  margin-bottom: 14px;
 }
