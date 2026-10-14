@@ -2,7 +2,7 @@
 
 A small 3D sports complex to explore: an F1 track for experience, a stadium for achievements and a rally hall for skills.
 
-Built with F1 · Soccer · Badminton · Table tennis. Part of [Shreyansh Sharan's portfolio](https://shreyansh-sharan.github.io/shreyanshsharan-portfolio/), split into its own site.
+Built with F1 · Soccer · Badminton · Table tennis. Part of [Shreyansh Sharan's portfolio](https://shreyanshsharan.com/), split into its own site.
 
 ```bash
 npm install

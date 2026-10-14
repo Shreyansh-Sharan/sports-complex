@@ -6,7 +6,7 @@ import { parse as parseFull, type Route } from './router.base'
 export type { Route }
 
 const GAME = 'sports'
-export const PORTFOLIO_URL = 'https://shreyansh-sharan.github.io/shreyanshsharan-portfolio/'
+export const PORTFOLIO_URL = 'https://shreyanshsharan.com/'
 
 /** `#/`, `#/?auto=...` and `#/sports?...` all mean the game; only the query matters. */
 export function parse(hash: string): Route {
